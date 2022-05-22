@@ -6,14 +6,14 @@ Base styles
     font-size: 62.5%;
 }
 
-/*********************************************************************
-Layout
-*********************************************************************/
 h1 {
     font-size: 3.2rem;
 }
 h2 {
     font-size: 2.6rem;
+}
+p {
+    font-size: 1.5rem;
 }
 input {
     text-align: center;
@@ -23,8 +23,12 @@ label {
 }
 
 /*******************************************************************
-Additional styles
+Utility classes
 *******************************************************************/
+/* * {
+    border: 3px solid green !important;
+} */
+
 .container {
     display: flex;
     margin-top: 5rem;
@@ -53,6 +57,22 @@ Additional styles
     margin-top: var(--margin-small);
     padding: 0.5rem 1rem;
 }
+
+/****************************************************
+ Responses and history
+****************************************************/
 .responses {
-    margin-top: var(--margin-large)
+    margin-top: var(--margin-large);
+    width: inherit;
+}
+.history-title {
+    align-self: center;
+}
+.response-title {
+    font-weight: bold;
+}
+.history-item {
+    background-color: rgb(227, 227, 227);
+    align-self: stretch;
+    margin: 1rem;
 }

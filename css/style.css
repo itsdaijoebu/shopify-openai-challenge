@@ -1,0 +1,58 @@
+/************************************************************************
+Base styles
+************************************************************************/
+* {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+/*********************************************************************
+Layout
+*********************************************************************/
+h1 {
+    font-size: 3.2rem;
+}
+h2 {
+    font-size: 2.6rem;
+}
+input {
+    text-align: center;
+}
+label {
+    display: inline-block;
+}
+
+/*******************************************************************
+Additional styles
+*******************************************************************/
+.container {
+    display: flex;
+    margin-top: 5rem;
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    --margin-small: 0.25rem;
+    --margin-medium: 2rem;
+    --margin-large: 4rem;
+}
+.flex {
+    display: flex;
+}
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-item {
+    margin: var(--margin-small);
+}
+.button {
+    margin-top: var(--margin-small);
+    padding: 0.5rem 1rem;
+}
+.responses {
+    margin-top: var(--margin-large)
+}

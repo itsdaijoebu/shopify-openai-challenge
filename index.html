@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
+
+    <!-- CSS links-->
+    <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    
+    <div class="container flex flex-column flex-center">
+        <h1>
+            <form action="" class="flex flex-column flex-center">
+                <label for="name" class="title flex-item">Tell me about the worst day in the life of </label>
+                <input type="text" name="name" id="name" placeholder="Adolph Hitler" class="flex-item" required>
+                <input type="submit" value="Make me feel better about my day" class="flex-item button">
+            </form>
+        </h1>
+
+        <section class="responses">
+            <h2>Worst Days</h2>
+            <section class="history">
+
+            </section>
+        </section>
+
+
+    </div>
+
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

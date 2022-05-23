@@ -42,34 +42,34 @@ function getWorstDay(name) {
     const apiKey = config.OPENAI_API_KEY;
     const url = "https://api.openai.com/v1/engines/text-curie-001/completions";
 
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", url);
+    const data = {
+        prompt: `Write a story about the worst day in ${name}'s life`,
+        max_tokens: 257,
+        temperature: 0.9
+    }
 
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("Authorization", `Bearer ${apiKey}`);
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            let response = JSON.parse(xhr.responseText)
-            let worstDay = response.choices[0].text;
-            let worstDayString = JSON.stringify(worstDay).replace(/\\n/g, '<br>').replace(/\\/g, '');
-            worstDayString = worstDayString.substring(9, worstDayString.length-1)
-            // console.log(worstDay)
-            // console.log(worstDayString)
-            // console.log(worstDay)
-            addResponse(name, worstDayString);
-        }
-    };
-
-    let data = `{
-  "prompt": "Write a story about the worst day in ${name}'s life",
-  "max_tokens": 257,
-  "temperature": 0.9
-}`;
-
-    xhr.send(data);
+    fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify(data),
+    }).then(response => response.json())
+    .then(data => {
+        console.log(data)
+        let worstDay = data.choices[0].text;
+        console.log(worstDay)
+        let worstDayString = JSON.stringify(worstDay).replace(/\\n/g, '<br>').replace(/\\/g, '');
+        console.log(worstDayString)
+        worstDayString = worstDayString.substring(9, worstDayString.length-1);
+        console.log(worstDayString);
+        addResponse(name, worstDayString);
+    });
 }
 
+
+// prepends a response to the history of worst days
 function addResponse(name, response) {
     // Create elements for response
     let item = document.createElement('section');

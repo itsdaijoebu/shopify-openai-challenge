@@ -1,0 +1,22 @@
+{
+  "name": "worst-day",
+  "version": "1.0.0",
+  "description": "Uses OpenAi to give us a story of the worst day in the life of a user-named character",
+  "main": "(main.js)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsdaijoebu/shopify-openai-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsdaijoebu/shopify-openai-challenge/issues"
+  },
+  "homepage": "https://github.com/itsdaijoebu/shopify-openai-challenge#readme",
+  "dependencies": {
+    "openai": "^2.0.5"
+  }
+}

@@ -1,4 +1,4 @@
-require ('dotenv');
+// require ('dotenv');
 
 /*********************************
 *DOM ELEMENTS AND GLOBAL VARS

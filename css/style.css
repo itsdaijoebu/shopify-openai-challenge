@@ -25,9 +25,11 @@ label {
 /*******************************************************************
 Utility classes
 *******************************************************************/
-/* * {
-    border: 3px solid green !important;
-} */
+* {
+    /* border: 3px solid green !important; */
+    background: rgb(206, 202, 202);
+}
+
 
 .container {
     display: flex;

@@ -1,3 +1,5 @@
+require ('dotenv');
+
 /*********************************
 *DOM ELEMENTS AND GLOBAL VARS
 **********************************/
@@ -6,8 +8,6 @@ const responseHistory = document.querySelector('#response-history');
 const mcName = document.querySelector('#name');
 const submitName = document.querySelector('#submit-name');
 const resetName = document.querySelector('#reset-name');
-
-
 
 /*********************************
 *DEFAULT BEHAVIORS
